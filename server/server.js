@@ -74,6 +74,7 @@ app.get("/agora", (req, res) => {
 
 // API: devolve as cartas em JSON
 app.get("/api/cartas", (req, res) => {
+  res.set("Access-Control-Allow-Origin", "http://localhost:5173");
   res.json(cards);
 });
 
